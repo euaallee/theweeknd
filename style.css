@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background-color: rgb(36, 36, 36);
+}
+
+.parallax {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#frame {
+    width: 1200px;
+    height: 520px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax_layer {
+    position: fixed;
+    width: 1200px;
+    height: 520px;
+    animation-name: parallax;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.parallax_layer1 {
+    z-index: 1;
+    background: url(layer1star.png);
+    transform: scaleX(-1);
+    width: 1200px;
+    animation-duration: 20s;
+
+}
+
+.parallax_layer2 {
+    z-index: 2;
+    background: url(layer2tw.png);
+    width: 1200px;
+    animation-duration: 30s;
+}
+
+@keyframes parallax {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 1000% 0;
+    }
+}
+
+/* For M */
